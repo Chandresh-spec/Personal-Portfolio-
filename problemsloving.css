@@ -1,83 +1,125 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f9;
+  color: #2c3e50;
+  line-height: 1.6;
+}
 
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f4f6f9;
-      color: #2c3e50;
-      line-height: 1.6;
-    }
+/* Section Common Styles */
+section {
+  padding: 60px 20px;
+}
 
-    #problem-solving {
-      background-color: #eaf6f6;
-      padding: 60px 20px;
-    }
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
 
-    #problem-solving .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      text-align: center;
-    }
+h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+  font-weight: 600;
+  color: #0d3b66;
+}
 
-    #problem-solving h2 {
-      font-size: 36px;
-      margin-bottom: 30px;
-      font-weight: 600;
-      color: #0d3b66;
-    }
+.section-description {
+  font-size: 18px;
+  margin-bottom: 25px;
+  color: #4a4a4a;
+}
 
-    .platforms {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-      padding: 0 20px;
-    }
+/* Problem Solving Platforms */
+#problem-solving {
+  background-color: #eaf6f6;
+}
 
-    .platform-card {
-      background-color: #ffffff;
-      border-radius: 12px;
-      padding: 25px;
-      font-size: 18px;
-      font-weight: 500;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-      transition: transform 0.3s ease, background-color 0.3s ease;
-    }
+.platforms {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 0 20px;
+}
 
-    .platform-card:hover {
-      transform: translateY(-6px);
-      background-color: #d7f0f5;
-    }
+.platform-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 25px;
+  font-size: 18px;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
 
-    .platform-card h3 {
-      font-size: 24px;
-      margin-bottom: 10px;
-      color: #145374;
-    }
+.platform-card:hover {
+  transform: translateY(-6px);
+  background-color: #d7f0f5;
+}
 
-    .platform-card p {
-      font-size: 17px;
-      color: #4a4a4a;
-    }
+.platform-card h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #145374;
+}
 
-    strong {
-      color: #028090;
-    }
+.platform-card p {
+  font-size: 17px;
+  color: #4a4a4a;
+}
 
-    @media (max-width: 600px) {
-      #problem-solving h2 {
-        font-size: 28px;
-      }
+strong {
+  color: #028090;
+}
 
-      .platform-card h3 {
-        font-size: 20px;
-      }
+/* Striver SDE Sheet Section */
+#sde-sheet {
+  background-color: #fff7f0;
+}
 
-      .platform-card p {
-        font-size: 16px;
-      }
-    }
- 
+#sde-sheet strong {
+  color: #f97316;
+}
+
+/* LeetCode Image Section */
+#leetcode-proof {
+  background-color: #f0f9ff;
+}
+
+.leetcode-img-wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.leetcode-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  h2 {
+    font-size: 28px;
+  }
+
+  .platform-card h3 {
+    font-size: 20px;
+  }
+
+  .platform-card p {
+    font-size: 16px;
+  }
+
+  .section-description {
+    font-size: 16px;
+  }
+}

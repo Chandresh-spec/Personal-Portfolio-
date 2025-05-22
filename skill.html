@@ -4,7 +4,142 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Skills & Product</title>
-  <link rel="stylesheet" href="skill.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #e0f7fa, #f0f4f8);
+      color: #1e293b;
+      line-height: 1.6;
+    }
+
+    section {
+      padding: 70px 20px;
+    }
+
+    h2 {
+      font-size: 38px;
+      margin-bottom: 40px;
+      font-weight: 700;
+      color: #0f172a;
+      text-align: center;
+      position: relative;
+    }
+
+    h2::after {
+      content: '';
+      width: 80px;
+      height: 4px;
+      background-color: #06b6d4;
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 5px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    /* Skills Section */
+    #skills {
+      background-color: #ecfdf5;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      padding: 0 10px;
+    }
+
+    .skill-card {
+      background: linear-gradient(135deg, #ffffff, #f0fdf4);
+      border-radius: 16px;
+      padding: 30px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-left: 6px solid #10b981;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+    }
+
+    .skill-card h3 {
+      font-size: 22px;
+      color: #0284c7;
+      margin-bottom: 10px;
+    }
+
+    .skill-card h3 span {
+      background: #d1fae5;
+      font-size: 12px;
+      color: #047857;
+      margin-left: 10px;
+      padding: 2px 6px;
+      border-radius: 4px;
+      text-transform: uppercase;
+    }
+
+    .source {
+      font-size: 15px;
+      color: #64748b;
+    }
+
+    /* Future Product Section */
+    #future-product {
+      background-color: #f9fafb;
+    }
+
+    #future-product p,
+    #future-product li {
+      font-size: 18px;
+      color: #334155;
+    }
+
+    #future-product ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 20px;
+    }
+
+    #future-product li {
+      background: #e0f2fe;
+      border-left: 6px solid #0ea5e9;
+      margin-bottom: 16px;
+      padding: 16px 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+    }
+
+    #future-product strong {
+      color: #0f766e;
+    }
+
+    @media (max-width: 600px) {
+      h2 {
+        font-size: 28px;
+      }
+
+      .skill-card {
+        padding: 20px;
+      }
+
+      #future-product li {
+        font-size: 16px;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -32,6 +167,18 @@
         <div class="skill-card">
           <h3>Object-Oriented Programming (OOPs)</h3>
           <p class="source">Learning from <strong>Code with Harry</strong></p>
+        </div>
+        <div class="skill-card">
+          <h3>Django <span>Working</span></h3>
+          <p class="source">Building backend in personal projects</p>
+        </div>
+        <div class="skill-card">
+          <h3>Git</h3>
+          <p class="source">Version control skills</p>
+        </div>
+        <div class="skill-card">
+          <h3>GitHub</h3>
+          <p class="source">Using for project hosting and collaboration</p>
         </div>
       </div>
     </div>

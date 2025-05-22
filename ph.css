@@ -1,4 +1,5 @@
-* {
+
+    * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -17,7 +18,7 @@ section {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
   text-align: center;
 }
@@ -31,8 +32,11 @@ h2 {
 
 .section-description {
   font-size: 18px;
-  margin-bottom: 25px;
+  margin-bottom: 40px;
   color: #4a4a4a;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Problem Solving Platforms */
@@ -42,29 +46,31 @@ h2 {
 
 .platforms {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
   padding: 0 20px;
 }
 
 .platform-card {
   background-color: #ffffff;
-  border-radius: 12px;
-  padding: 25px;
+  border-radius: 16px;
+  padding: 30px;
   font-size: 18px;
   font-weight: 500;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
 }
 
 .platform-card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-8px);
   background-color: #d7f0f5;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
 }
 
 .platform-card h3 {
-  font-size: 24px;
-  margin-bottom: 10px;
+  font-size: 26px;
+  margin-bottom: 12px;
   color: #145374;
 }
 
@@ -91,28 +97,38 @@ strong {
   background-color: #f0f9ff;
 }
 
-.leetcode-img-wrapper {
-  max-width: 600px;
+/* Gallery styles for multiple screenshots */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  padding: 0 10px;
+  max-width: 900px;
   margin: 0 auto;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
 
-.leetcode-img {
+.gallery img {
   width: 100%;
   height: auto;
-  display: block;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
 
 /* Responsive */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   h2 {
     font-size: 28px;
   }
 
   .platform-card h3 {
-    font-size: 20px;
+    font-size: 22px;
   }
 
   .platform-card p {
@@ -123,3 +139,21 @@ strong {
     font-size: 16px;
   }
 }
+
+@media (max-width: 480px) {
+  section {
+    padding: 40px 10px;
+  }
+
+  .platforms {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+}
+
+ 
